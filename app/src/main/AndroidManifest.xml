@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.intake"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="18" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.intake.UserTypeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.intake.HomeScreenActivity"
+            android:label="@string/title_activity_home_screen"
+            >
+        </activity>
+        <activity
+            android:name="com.example.intake.PatientAdmittanceActivity"
+            android:label="@string/title_activity_patient_admittance" >
+        </activity>
+        <activity
+            android:name="com.example.intake.FindPatientActivity"
+            android:label="@string/title_activity_find_patient" >
+        </activity>
+        <activity
+            android:name="com.example.intake.DisplayThatPatientActivity"
+            android:label="@string/title_activity_display_that_patient" >
+        </activity>
+        <activity
+            android:name="com.example.intake.RecordVitalsActivity"
+            android:label="@string/title_activity_record_vitals" >
+        </activity>
+        <activity
+            android:name="com.example.intake.LogOnActivity"
+            android:label="@string/title_activity_log_on" >
+        </activity>
+        <activity
+            android:name="com.example.intake.UrgencyDisplayActivity"
+            android:label="@string/title_activity_urgency_display" >
+        </activity>
+        <activity
+            android:name="com.example.intake.NurseOptionsActivity"
+            android:label="@string/title_activity_nurse_options" >
+        </activity>
+        <activity
+            android:name="com.example.intake.PhysicianOptionsActivity"
+            android:label="@string/title_activity_physician_options" >
+        </activity>
+        <activity
+            android:name="com.example.intake.PrescribeMedicationActivity"
+            android:label="@string/title_activity_prescribe_medication" >
+        </activity>
+        
+    </application>
+
+</manifest>

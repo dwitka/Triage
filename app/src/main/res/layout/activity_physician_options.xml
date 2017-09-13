@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/index"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PhysicianOptionsActivity" >
+    
+        <TextView
+        android:id="@+id/basicInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#190707"
+        android:textStyle="bold"
+        android:text="@string/options" />
+    
+        <Button
+        android:id="@+id/button1"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+    	android:textColor="#ffffff"
+        android:onClick="displayPatient"
+        android:background="@drawable/mybutton"
+        android:text="@string/display_patient" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+        	android:layout_marginTop="20dp"
+        	android:padding="10dp"
+    		android:textColor="#ffffff"
+            android:onClick="recordPrescriptionInfo"
+            android:background="@drawable/mybutton"
+            android:text="@string/record_prescription" />
+      
+        <Button
+        android:id="@+id/button4"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/back"
+        android:textStyle="bold"
+        android:padding="10dp"
+    	android:textColor="#ffffff"
+    	android:background="@drawable/mybutton"
+        android:onClick= "goHome" />
+        
+  	
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Emergency Room Triage</string>
+    <string name="action_settings">Settings</string>
+    <string name="user">Username</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="user_name">User Name</string>
+    <string name="title_activity_home_screen">Make a Selection</string>
+    <string name="retrieve_patient">Search for a Patient by Health Card Number</string>
+    <string name="retrieve">Retrieve</string>
+    <string name="hcn">Health Card Number</string>
+    <string name="new_patient">New Patient</string>
+    <string name="load_patient">Load Patient</string>
+    <string name="title_activity_patient_admittance">Patient Admittance</string>
+    <string name="name">Patient Name</string>
+    <string name="dd">DD</string>
+    <string name="mm">MM</string>
+    <string name="yy">YYYY</string>
+    <string name="dob">Date of Birth</string>
+    <string name="line"></string>
+    <string name="title_activity_find_patient">Retrieve Patient</string>
+    <string name="title_activity_display_that_patient">Patient Information</string>
+    <string name="update_vitals">Update Vitals</string>
+    <string name="patient_displayed_info">Display Patient Info Here</string>
+    <string name="title_activity_record_vitals">Record Vitals</string>
+    <string name="temperature">Temperature</string>
+    <string name="systolic">Systolic Blood Pressure</string>
+    <string name="diastolic">Diastolic Blood Pressure</string>
+    <string name="hr">Heart Rate</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="nurse">Nurse</string>
+    <string name="physician">Physician</string>
+    <string name="record_prescription">Prescribe Medication</string>
+    <string name="prescription_name">Prescription Name</string>
+    <string name="prescription_instructions">Prescription Instructions</string>
+    <string name="urgency_list">Display Patients by Urgency</string>
+    <string name="title_activity_urgency_display">Patients Listed by Urgency</string>
+    <string name="back">Back</string>
+    <string name="title_activity_nurse_options">Make a selection</string>
+    <string name="title_activity_physician_options">Make a selection</string>
+    <string name="options">Options</string>
+    <string name="display_patient">Display Patient Data</string>
+    <string name="record_vitals">Record Vital Signs</string>
+    <string name="set_as_seen">Seen by Doctor</string>
+    <string name="title_activity_prescribe_medication">Prescribe Medication</string>
+	<string name="home">Home</string>
+	<string name="title_activity_log_on">Log On</string>
+	
+	<style name="ButtonText">
+    	<item name="android:layout_width">126dp</item>
+    	<item name="android:layout_height">wrap_content</item>
+    	<item name="android:textColor">#ffffff</item>
+    	<item name="android:gravity">center</item>
+    	<item name="android:layout_margin">3dp</item>
+    	<item name="android:textStyle">bold</item>
+    	<item name="android:shadowColor">#000000</item>
+    	<item name="android:shadowDx">1</item>
+    	<item name="android:shadowDy">1</item>
+    	<item name="android:shadowRadius">2</item>
+	</style>
+</resources>
+
+
