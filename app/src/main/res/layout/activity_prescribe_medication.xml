@@ -26,6 +26,7 @@
         android:hint="@string/prescription_instructions" />
 
     <Button
+        android:alpha="0.9"
         android:id="@+id/button_record_precription"
         android:layout_width="206dp"
         android:layout_height="wrap_content"

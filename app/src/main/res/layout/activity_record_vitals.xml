@@ -17,25 +17,26 @@
         android:layout_height="52dp"
         android:hint="@string/temperature" />
     
-        <EditText
+    <EditText
         android:id="@+id/systolic_field"
         android:layout_width="250dp"
         android:layout_height="52dp"
         android:hint="@string/systolic" />
         
-            <EditText
+    <EditText
         android:id="@+id/diastolic_field"
         android:layout_width="250dp"
         android:layout_height="52dp"
         android:hint="@string/diastolic" />
             
-            <EditText
+    <EditText
         android:id="@+id/hr_field"
         android:layout_width="250dp"
         android:layout_height="52dp"
         android:hint="@string/hr" />
             
     <Button
+        android:alpha="0.9"
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,7 +47,5 @@
     	android:textColor="#ffffff"
     	android:background="@drawable/mybutton"
         android:onClick="recordSomeVitals" />
-    
-    
 
 </LinearLayout>
