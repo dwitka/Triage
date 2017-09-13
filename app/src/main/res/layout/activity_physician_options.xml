@@ -29,7 +29,7 @@
 			android:padding="10dp"
 			android:textColor="#ffffff"
 			android:onClick="displayPatient"
-			android:background="@drawable/mybutton"
+			android:background="@drawable/my_button"
 			android:text="@string/display_patient" />
 
         <Button
@@ -43,7 +43,7 @@
         	android:padding="10dp"
     		android:textColor="#ffffff"
             android:onClick="recordPrescriptionInfo"
-            android:background="@drawable/mybutton"
+            android:background="@drawable/my_button"
             android:text="@string/record_prescription" />
       
         <Button
@@ -56,7 +56,7 @@
 			android:textStyle="bold"
 			android:padding="10dp"
 			android:textColor="#ffffff"
-			android:background="@drawable/mybutton"
+			android:background="@drawable/my_button"
 			android:onClick= "goHome" />
         
   	

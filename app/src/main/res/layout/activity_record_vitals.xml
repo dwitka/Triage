@@ -45,7 +45,7 @@
         android:textStyle="bold"
         android:padding="10dp"
     	android:textColor="#ffffff"
-    	android:background="@drawable/mybutton"
+    	android:background="@drawable/my_button"
         android:onClick="recordSomeVitals" />
 
 </LinearLayout>

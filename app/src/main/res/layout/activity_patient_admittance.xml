@@ -79,7 +79,7 @@
         android:padding="10dp"
     	android:textColor="@color/blue_base"
     	android:alpha="0.9"
-    	android:background="@drawable/mybutton"
+    	android:background="@drawable/my_button"
         android:onClick= "admitThisPatient" />
 
 </LinearLayout>
