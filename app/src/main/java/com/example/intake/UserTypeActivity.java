@@ -31,73 +31,74 @@ public class UserTypeActivity extends Activity{
 	 * user types.
 	 */
 	private PasswordManager passManager;
-	
-		@Override
-		protected void onCreate(Bundle savedInstanceState) {
-			super.onCreate(savedInstanceState);
-			setContentView(R.layout.activity_log_on);
 
-            try{
-            	passManager = 
-            	new PasswordManager(this.getApplicationContext().getFilesDir(),
-            			"passwords.txt");
-            } catch (IOException e){
-            	e.printStackTrace();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_log_on);
+
+        try{
+            passManager =
+            new PasswordManager(this.getApplicationContext().getFilesDir(),
+                    "passwords.txt");
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+
+    /**
+     * Checks if the user signing in is a valid user, and if the password
+     * is correct, takes the user access all features based on the user's
+     * user type.
+     * @param view the view of this activity
+     */
+    public void signIn(View view){
+        EditText usernameText = (EditText) findViewById(R.id.user_name_field);
+        EditText passwordText = (EditText) findViewById(R.id.password_field);
+
+
+        String user_name =
+                usernameText.getText().toString();
+
+        String password = passwordText.getText().toString();
+
+        if (passManager.getPasswordsKey().containsKey(user_name)){
+            String correctPassword =
+                    passManager.getPasswordsKey().get(user_name);
+            String typeOfUser =
+                    passManager.getUserTypes().get(user_name);
+            if (correctPassword.equals(password)){
+                try{
+                    er =
+             new EmergencyRoom(this.getApplicationContext().getFilesDir(),
+                            PATIENT_FILE);
+                } catch (IOException e){
+                    e.printStackTrace();
+                }
+                if (typeOfUser.equals("0")){
+                    Intent intent =
+                            new Intent(this, HomeScreenActivity.class);
+                    this.userType = userTypes[0];
+                    intent.putExtra("er", er);
+                    intent.putExtra("userType", userType);
+                    startActivity(intent);
+                }
+                else if (typeOfUser.equals("1")){
+                    Intent intent =
+                            new Intent(this, FindPatientActivity.class);
+                    this.userType = userTypes[1];
+                    intent.putExtra("er", er);
+                    intent.putExtra("userType", userType);
+                    startActivity(intent);
+                }
             }
-		}
-		
-		
-		/**
-		 * Checks if the user signing in is a valid user, and if the password 
-		 * is correct, takes the user access all features based on the user's
-		 * user type.
-		 * @param view the view of this activity
-		 */
-		public void signIn(View view){
-	    	EditText user_nameText = 
-	    			(EditText) findViewById(R.id.user_name_field);
-	    	String user_name =
-	    			user_nameText.getText().toString();
-
-	    	EditText passwordText = 
-	    			(EditText) findViewById(R.id.password_field);
-	    	String password = passwordText.getText().toString();
-		
-	    	if (passManager.getPasswordsKey().containsKey(user_name)){
-	    		String correctPassword =
-	    				passManager.getPasswordsKey().get(user_name);
-	    		String typeOfUser =
-	    				passManager.getUserTypes().get(user_name);
-	    		if (correctPassword.equals(password)){
-		            try{
-		            	er =
-		         new EmergencyRoom(this.getApplicationContext().getFilesDir(),
-		            			PATIENT_FILE);
-		            } catch (IOException e){
-		            	e.printStackTrace();
-		            }
-		            if (typeOfUser.equals("0")){
-		    			Intent intent =
-		    					new Intent(this, HomeScreenActivity.class);
-		    			this.userType = userTypes[0];
-		    			intent.putExtra("er", er);
-		    			intent.putExtra("userType", userType);
-		    	    	startActivity(intent);
-		            }
-		            else if (typeOfUser.equals("1")){
-		    			Intent intent =
-		    					new Intent(this, FindPatientActivity.class);
-		    			this.userType = userTypes[1];
-		    			intent.putExtra("er", er);
-		    			intent.putExtra("userType", userType);
-		    	    	startActivity(intent);
-		            }
-	    		}
-	    		else{
-	    	    	Intent intent = new Intent(this, UserTypeActivity.class);
-	    	    	startActivity(intent);
-	    		}
-	    	}
-	    	
-		}
+            else{
+                Intent intent = new Intent(this, UserTypeActivity.class);
+                startActivity(intent);
+            }
+        }
+        passwordText.setText("");
+        usernameText.setText("");
+    }
 }
