@@ -45,10 +45,6 @@
             android:label="@string/title_activity_record_vitals" >
         </activity>
         <activity
-            android:name="com.example.intake.LogOnActivity"
-            android:label="@string/title_activity_log_on" >
-        </activity>
-        <activity
             android:name="com.example.intake.UrgencyDisplayActivity"
             android:label="@string/title_activity_urgency_display" >
         </activity>
