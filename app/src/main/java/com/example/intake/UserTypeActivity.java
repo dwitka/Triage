@@ -27,6 +27,8 @@ public class UserTypeActivity extends Activity{
 	
 	/**The file where all patient information is to be stored.*/
 	public static final String PATIENT_FILE = "patient_information.txt";
+
+    public static final String PASSWORD_FILE = "passwords.txt";
 	
 	/** The Emergency Room object which keeps track of all patients.*/
 	private EmergencyRoom er;
@@ -41,13 +43,12 @@ public class UserTypeActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_on);
 
-        String fileString = "Michael,123,0";
-        File file = new File(this.getFilesDir(), "passwords.txt");
+        String fileString = "Michael,123,0\nClara,456,1\n";
+        File file = new File(this.getFilesDir(), PASSWORD_FILE);
         file.delete();
 
         try {
-            FileOutputStream fos = openFileOutput("passwords.txt", this.MODE_PRIVATE);
-            fos.write("".getBytes());
+            FileOutputStream fos = openFileOutput(PASSWORD_FILE, this.MODE_PRIVATE);
             fos.write(fileString.getBytes());
             fos.close();
         } catch (FileNotFoundException e) {
@@ -63,7 +64,7 @@ public class UserTypeActivity extends Activity{
         try{
             passManager =
             new PasswordManager(this.getApplicationContext().getFilesDir(),
-                    "passwords.txt");
+                    PASSWORD_FILE);
         } catch (IOException e){
             e.printStackTrace();
         }

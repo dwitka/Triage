@@ -42,11 +42,11 @@ public class PasswordManager {
             Log.d("Filename: ", fileName);
             passwordsKey = new HashMap<>();
 	        userTypes = new HashMap<>();
-			passwordsKey.put("Michael", "123");
-			userTypes.put("Michael", "0");
+			//passwordsKey.put("Michael", "123");
+			//userTypes.put("Michael", "0");
 
-            passwordsKey.put("Clara", "456");
-            userTypes.put("Clara", "1");
+            //passwordsKey.put("Clara", "456");
+            //userTypes.put("Clara", "1");
 
 	        // Populates the password list using stored data, if it exists.
             File file = new File(dir, fileName);
