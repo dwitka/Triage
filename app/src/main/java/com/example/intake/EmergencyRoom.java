@@ -37,11 +37,11 @@ public class EmergencyRoom implements Serializable {
       * of this EmergencyRoom
       * @param filename the name of the file which stores patient data.
       */
-	    public EmergencyRoom(File dir, String fileName) throws IOException {
+	    public EmergencyRoom(File dir, String filename) throws IOException {
 	        patients = new HashMap<String, Patient>();
 	        patientsByArrivalTime = new ArrayList<Patient>();
 	
-	        File file = new File(dir, fileName);
+	        File file = new File(dir, filename);
 	        if (file.exists()) {
 	            readFromFile(file.getPath());
 	        } else {
@@ -118,8 +118,8 @@ public class EmergencyRoom implements Serializable {
 	     * @param patient the patient whose prescription is being recorded
 	     * @param prescription the prescription to record
 	     */
-	    public void recordPrescription(Patient patient, Medication med){
-	    	patient.getAllMeds().add(med);
+	    public void recordPrescription(Patient patient, Medication prescription){
+	    	patient.getAllMeds().add(prescription);
 	    }
 	    
 	    /**

@@ -76,7 +76,7 @@ public class NurseOptionsActivity extends Activity {
 	
 	/** Records a patient as having been seen by a doctor then takes
 	 * the user to DisplayThatPatientActivity. /*
-	 * @param view
+	 * @param view the view of this activity.
 	 * @throws IOException
 	 */
 	public void setAsSeen(View view) throws IOException{

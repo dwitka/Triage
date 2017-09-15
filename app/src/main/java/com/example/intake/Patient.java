@@ -73,7 +73,7 @@ public class Patient implements Serializable{
 
 	/**
 	 * Sets this patient's arrival time to a new time.
-	 * @param the time of this patient's arrival.
+	 * @param time of this patient's arrival.
 	 */
 	public void setArrivalTime(String time){
 		Long timeAsLong = Long.valueOf(time);
@@ -115,7 +115,7 @@ public class Patient implements Serializable{
 	/**
 	 * Sets this patient's list of all vital signs to a new
 	 * list of VitalSigns.
-	 * @param the list of VitalSigns to be designated to the patient.
+	 * @param allVitals the list of VitalSigns to be designated to the patient.
 	 */
 	public void setAllVitalSigns(List<VitalSigns> allVitals){
 		this.allVitalSigns = allVitals;
@@ -132,10 +132,10 @@ public class Patient implements Serializable{
 	/**
 	 * Sets this patient's list of all medications to a new
 	 * list of Medications.
-	 * @param the list of Medications to be designated to the patient.
+	 * @param allmeds list of Medications to be designated to the patient.
 	 */
-	public void setAllMeds(List<Medication> allMeds){
-		this.allMeds = allMeds;
+	public void setAllMeds(List<Medication> allmeds){
+		this.allMeds = allmeds;
 	}
 	
 	/**
@@ -150,7 +150,7 @@ public class Patient implements Serializable{
 	
 	/**
 	 * Sets the time this patient was seen by a doctor to a new time.
-	 * @param the time this patient was seen by a doctor
+	 * @param time this patient was seen by a doctor
 	 */
 	public void setTimeSeenByDoctor(String time){
 		Long timeAsLong = Long.valueOf(time);

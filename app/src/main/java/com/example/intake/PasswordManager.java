@@ -30,7 +30,6 @@ public class PasswordManager {
 	     * stored in directory dir in file named fileName.
 	     * @param dir the directory in which the data file is stored
 	     * @param fileName the data file containing Patient information
-	     * @param value An instance of the type being 
 	     * managed by this PasswordManager.
 	     * @throws IOException
 	     */
