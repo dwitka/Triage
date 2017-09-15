@@ -52,15 +52,11 @@ public class UserTypeActivity extends Activity{
             fos.write(fileString.getBytes());
             fos.close();
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
-        Log.d("Directory: ", this.getFilesDir().toString());
-        Log.d("Filename: ", "--------------------------------------------------");
         try{
             passManager =
             new PasswordManager(this.getApplicationContext().getFilesDir(),

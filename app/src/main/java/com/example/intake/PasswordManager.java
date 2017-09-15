@@ -35,26 +35,11 @@ public class PasswordManager {
 	     * @throws IOException
 	     */
 	    public PasswordManager(File dir, String fileName) throws IOException {
-
-
-
-            Log.d("Directory: ", dir.toString());
-            Log.d("Filename: ", fileName);
-            passwordsKey = new HashMap<>();
+			passwordsKey = new HashMap<>();
 	        userTypes = new HashMap<>();
-			//passwordsKey.put("Michael", "123");
-			//userTypes.put("Michael", "0");
 
-            //passwordsKey.put("Clara", "456");
-            //userTypes.put("Clara", "1");
-
-	        // Populates the password list using stored data, if it exists.
+			// Populates the password list using stored data, if it exists.
             File file = new File(dir, fileName);
-            Log.d("Filename: ", file.toString());
-            Log.d("Absolute path: ", file.getAbsolutePath());
-
-            Log.d("File path: ", file.getPath());
-
 			if (file.exists()) {
 	            readFromFile(file.getPath());
 	        } else {
@@ -62,7 +47,6 @@ public class PasswordManager {
 	        }
 	    }
 
-	    
 	    /**
 	     * Returns the passwords managed by this PasswordManager.
 	     * @return a map of username to password object
@@ -78,7 +62,6 @@ public class PasswordManager {
 	    public Map<String, String> getUserTypes() {
 	        return userTypes;
 	    }
-
 
 	    /**
 	     * Populates the passwords map and user type map from the file 
