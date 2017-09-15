@@ -33,7 +33,5 @@
         android:textStyle="bold"
         android:padding="10dp"
     	android:textColor="#ffffff"/>
-    
-    
 
 </LinearLayout>

@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".PhysicianOptionsActivity" >
     
-        <TextView
+	<TextView
         android:id="@+id/basicInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,47 +18,45 @@
         android:textStyle="bold"
         android:text="@string/options" />
     
-        <Button
-			android:alpha="0.9"
-			android:id="@+id/button1"
-			android:layout_width="126dp"
-			android:layout_height="wrap_content"
-			android:textStyle="bold"
-			android:layout_marginBottom="20dp"
-			android:layout_marginTop="20dp"
-			android:padding="10dp"
-			android:textColor="#ffffff"
-			android:onClick="displayPatient"
-			android:background="@drawable/my_button"
-			android:text="@string/display_patient" />
+	<Button
+		android:alpha="0.9"
+		android:id="@+id/button1"
+		android:layout_width="126dp"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:layout_marginBottom="20dp"
+		android:layout_marginTop="20dp"
+		android:padding="10dp"
+		android:textColor="#ffffff"
+		android:onClick="displayPatient"
+		android:background="@drawable/my_button"
+		android:text="@string/display_patient" />
 
-        <Button
-			android:alpha="0.9"
-            android:id="@+id/button2"
-            android:layout_width="126dp"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_marginBottom="20dp"
-        	android:layout_marginTop="20dp"
-        	android:padding="10dp"
-    		android:textColor="#ffffff"
-            android:onClick="recordPrescriptionInfo"
-            android:background="@drawable/my_button"
-            android:text="@string/record_prescription" />
-      
-        <Button
-			android:alpha="0.9"
-			android:id="@+id/button4"
-			android:layout_width="126dp"
-			android:layout_height="wrap_content"
-			android:layout_marginBottom="20dp"
-			android:text="@string/back"
-			android:textStyle="bold"
-			android:padding="10dp"
-			android:textColor="#ffffff"
-			android:background="@drawable/my_button"
-			android:onClick= "goHome" />
-        
-  	
+	<Button
+		android:alpha="0.9"
+		android:id="@+id/button2"
+		android:layout_width="126dp"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:layout_marginBottom="20dp"
+		android:layout_marginTop="20dp"
+		android:padding="10dp"
+		android:textColor="#ffffff"
+		android:onClick="recordPrescriptionInfo"
+		android:background="@drawable/my_button"
+		android:text="@string/record_prescription" />
+
+	<Button
+		android:alpha="0.9"
+		android:id="@+id/button4"
+		android:layout_width="126dp"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="20dp"
+		android:text="@string/back"
+		android:textStyle="bold"
+		android:padding="10dp"
+		android:textColor="#ffffff"
+		android:background="@drawable/my_button"
+		android:onClick= "goHome" />
 
 </LinearLayout>

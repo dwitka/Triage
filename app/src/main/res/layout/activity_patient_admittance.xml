@@ -10,8 +10,6 @@
     android:background="@drawable/finn"
     tools:context=".PatientAdmittanceActivity" >
 
-
-
     <EditText
         android:id="@+id/name_field"
         android:layout_width="250dp"
@@ -32,7 +30,7 @@
           android:textColorHint="@color/blue_base"
           android:text="@string/line" />
     
-      <TextView
+    <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:textColor="@color/white"
@@ -44,7 +42,6 @@
         android:orientation="horizontal" >
     
     <EditText
-        
         android:id="@+id/birthDay_field"
         android:layout_width="56dp"
         android:layout_height="wrap_content"

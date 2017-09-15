@@ -33,7 +33,5 @@
     	android:textColor="#ffffff"
     	android:background="@drawable/my_button"
         android:onClick= "getThatPatient" />
-    
-    
 
 </LinearLayout>
