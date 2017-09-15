@@ -30,13 +30,13 @@ public class PasswordManager {
 	     * @throws IOException
 	     */
 	    public PasswordManager(File dir, String fileName) throws IOException {
-	        passwordsKey = new HashMap<String, String>();
-	        userTypes = new HashMap<String, String>();
-			passwordsKey.put("bob", "123");
-			userTypes.put("bob", "0");
+	        passwordsKey = new HashMap<>();
+	        userTypes = new HashMap<>();
+			passwordsKey.put("Michael", "123");
+			userTypes.put("Michael", "0");
 
-            passwordsKey.put("clara", "456");
-            userTypes.put("clara", "1");
+            passwordsKey.put("Clara", "456");
+            userTypes.put("Clara", "1");
 
 	        // Populates the password list using stored data, if it exists.
 	        File file = new File(dir, fileName);
