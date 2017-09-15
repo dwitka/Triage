@@ -1,8 +1,13 @@
 package com.example.intake;
 
+import android.content.Intent;
+import android.util.Log;
+import android.widget.Toast;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -30,7 +35,12 @@ public class PasswordManager {
 	     * @throws IOException
 	     */
 	    public PasswordManager(File dir, String fileName) throws IOException {
-	        passwordsKey = new HashMap<>();
+
+
+
+            Log.d("Directory: ", dir.toString());
+            Log.d("Filename: ", fileName);
+            passwordsKey = new HashMap<>();
 	        userTypes = new HashMap<>();
 			passwordsKey.put("Michael", "123");
 			userTypes.put("Michael", "0");
@@ -39,8 +49,13 @@ public class PasswordManager {
             userTypes.put("Clara", "1");
 
 	        // Populates the password list using stored data, if it exists.
-	        File file = new File(dir, fileName);
-	        if (file.exists()) {
+            File file = new File(dir, fileName);
+            Log.d("Filename: ", file.toString());
+            Log.d("Absolute path: ", file.getAbsolutePath());
+
+            Log.d("File path: ", file.getPath());
+
+			if (file.exists()) {
 	            readFromFile(file.getPath());
 	        } else {
 	            file.createNewFile();

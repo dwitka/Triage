@@ -2,7 +2,6 @@ package com.example.intake;
 
 import android.os.Bundle;
 
-//testcomment
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;

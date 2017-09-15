@@ -1,11 +1,15 @@
 package com.example.intake;
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -37,6 +41,25 @@ public class UserTypeActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_on);
 
+        String fileString = "Michael,123,0";
+        File file = new File(this.getFilesDir(), "passwords.txt");
+        file.delete();
+
+        try {
+            FileOutputStream fos = openFileOutput("passwords.txt", this.MODE_PRIVATE);
+            fos.write("".getBytes());
+            fos.write(fileString.getBytes());
+            fos.close();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        Log.d("Directory: ", this.getFilesDir().toString());
+        Log.d("Filename: ", "--------------------------------------------------");
         try{
             passManager =
             new PasswordManager(this.getApplicationContext().getFilesDir(),
